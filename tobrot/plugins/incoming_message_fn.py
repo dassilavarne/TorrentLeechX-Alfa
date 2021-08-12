@@ -57,7 +57,7 @@ async def incoming_message_f(client, message):
         f"🧲 𝕃𝕖𝕖𝕔𝕙𝕚𝕟𝕘 <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html"
     )
     # get link from the incoming message
-    i_m_sefg = await message.reply_text("processing...", quote=True)
+    i_m_sefg = await message.reply_text("𝐢𝐬𝐥𝐞𝐧𝐢𝐲𝐨𝐫...", quote=True)
     rep_mess = message.reply_to_message
     is_file = False
     dl_url = ''
@@ -96,7 +96,7 @@ async def incoming_message_f(client, message):
             os.makedirs(new_download_location)
         aria_i_p = ''
         if not is_file:
-            await i_m_sefg.edit_text("extracting links")
+            await i_m_sefg.edit_text("𝐁𝐚𝐠𝐥𝐚𝐧𝐭𝐢 𝐀𝐲𝐢𝐤𝐥𝐚𝐧𝐢𝐲𝐨𝐫")
             # start the aria2c daemon
             aria_i_p = await aria_start()
             # LOGGER.info(aria_i_p)
@@ -150,7 +150,7 @@ async def incoming_youtube_dl_f(client, message):
         f"💀 𝐢𝐧𝐝𝐢𝐫𝐢𝐥𝐢𝐲𝐨𝐫 <a href='tg://user?id={current_user_id}'>🤕</a>",
         parse_mode="html",
     )
-    i_m_sefg = await message.reply_text("processing...", quote=True)
+    i_m_sefg = await message.reply_text("𝐢𝐬𝐥𝐞𝐧𝐢𝐲𝐨𝐫...", quote=True)
     # LOGGER.info(message)
     # extract link from message
     if message.reply_to_message:
@@ -170,7 +170,7 @@ async def incoming_youtube_dl_f(client, message):
         await i_m_sefg.edit("😔 𝐈𝐧𝐝𝐢𝐫𝐦𝐞 𝐤𝐚𝐲𝐧𝐚𝐠𝐢 𝐲𝐨𝐤 🙄")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("extracting links")
+        await i_m_sefg.edit_text("𝐁𝐚𝐠𝐥𝐚𝐧𝐭𝐢 𝐀𝐲𝐢𝐤𝐥𝐚𝐧𝐢𝐲𝐨𝐫")
         # create an unique directory
         user_working_dir = os.path.join(
             DOWNLOAD_LOCATION, str(current_user_id))
