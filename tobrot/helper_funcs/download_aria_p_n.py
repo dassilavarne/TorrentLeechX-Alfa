@@ -93,7 +93,7 @@ def add_magnet(aria_instance, magnetic_link, c_file_name):
         return (
             False,
             "**FAILED** \n" +
-            str(e) + " \nPlease do not send SLOW links. Read /help",
+            str(e) + " \n 𝐋ü𝐭𝐟𝐞𝐧 𝐘𝐀𝐕𝐀Ş 𝐥𝐢𝐧𝐤𝐥𝐞𝐫 𝐠ö𝐧𝐝𝐞𝐫𝐦𝐞𝐲𝐢𝐧 /help",
         )
     else:
         return True, "" + download.gid + ""
@@ -105,7 +105,7 @@ def add_torrent(aria_instance, torrent_file_path):
             False,
             "**FAILED** \n"
             + str(e)
-            + " \nsomething wrongings when trying to add <u>TORRENT</u> file",
+            + " \n <u>TORRENT</u> 𝐞𝐤𝐥𝐞𝐦𝐞𝐲𝐞 ç𝐚𝐥ışı𝐫𝐤𝐞𝐧 𝐛𝐢𝐫 ş𝐞𝐲𝐥𝐞𝐫 𝐲𝐚𝐧𝐥ış 𝐠𝐢𝐝𝐢𝐲𝐨𝐫  file",
         )
     if os.path.exists(torrent_file_path):
         # Add Torrent Into Queue
@@ -118,12 +118,12 @@ def add_torrent(aria_instance, torrent_file_path):
                 False,
                 "**FAILED** \n"
                 + str(e)
-                + " \nPlease do not send SLOW links. Read /help",
+                + " \n 𝐋ü𝐭𝐟𝐞𝐧 𝐘𝐀𝐕𝐀Ş 𝐥𝐢𝐧𝐤𝐥𝐞𝐫 𝐠ö𝐧𝐝𝐞𝐫𝐦𝐞𝐲𝐢𝐧 /help",
             )
         else:
             return True, "" + download.gid + ""
     else:
-        return False, "**FAILED** \nPlease try other sources to get workable link"
+        return False, "**FAILED** \n 𝐛𝐚ğ𝐥𝐚𝐧𝐭ı 𝐚𝐥𝐦𝐚𝐤 𝐢ç𝐢𝐧 𝐥ü𝐭𝐟𝐞𝐧 𝐝𝐢ğ𝐞𝐫 𝐤𝐚𝐲𝐧𝐚𝐤𝐥𝐚𝐫ı 𝐝𝐞𝐧𝐞𝐲𝐢𝐧"
 
 
 def add_url(aria_instance, text_url, c_file_name):
@@ -153,7 +153,7 @@ def add_url(aria_instance, text_url, c_file_name):
         return (
             False,
             "**FAILED** \n" +
-            str(e) + " \nPlease do not send SLOW links. Read /help",
+            str(e) + " \n 𝐋ü𝐭𝐟𝐞𝐧 𝐘𝐀𝐕𝐀Ş 𝐥𝐢𝐧𝐤𝐥𝐞𝐫 𝐠ö𝐧𝐝𝐞𝐫𝐦𝐞𝐲𝐢𝐧 /help",
         )
     else:
         return True, "" + download.gid + ""
@@ -270,7 +270,7 @@ async def call_apropriate_function(
                     message_id = final_response[key_f_res_se]
                     channel_id = str(sent_message_to_update_tg_p.chat.id)[4:]
                     private_link = f"https://t.me/c/{channel_id}/{message_id}"
-                    message_to_send += "👉 <a href='"
+                    message_to_send += "🔥 <a href='"
                     message_to_send += private_link
                     message_to_send += "'>"
                     message_to_send += local_file_name
@@ -278,12 +278,12 @@ async def call_apropriate_function(
                     message_to_send += "\n"
                 if message_to_send != "":
                     mention_req_user = (
-                        f"<a href='tg://user?id={user_id}'>Your Requested Files</a>\n\n"
+                        f"<a href='tg://user?id={user_id}'> 𝐃𝐨𝐬𝐲𝐚𝐥𝐚𝐫ı𝐧ı𝐳 </a>\n\n"
                     )
                     message_to_send = mention_req_user + message_to_send
-                    message_to_send = message_to_send + "\n\n" + "#uploads"
+                    message_to_send = message_to_send + "\n\n" + " 【﻿Ｙüｋｌｅｎｄｉ】 "
                 else:
-                    message_to_send = "<i>FAILED</i> to upload files. 😞😞"
+                    message_to_send = "<i>FAILED</i> 𝐝𝐨𝐬𝐲𝐚𝐥𝐚𝐫ı 𝐲ü𝐤𝐥𝐞𝐦𝐞𝐤 𝐢ç𝐢𝐧"
                 await user_message.reply_text(
                     text=message_to_send, quote=True, disable_web_page_preview=True
                 )
