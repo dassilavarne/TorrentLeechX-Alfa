@@ -63,9 +63,9 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
             if file.status == "active":
                 is_file = file.seeder
                 if is_file is None:
-                    msgg = f"<b>Conn:</b> {file.connections}"
+                    msgg = f"<b>🎈 Conn:</b> {file.connections}"
                 else:
-                    msgg = f"<b>Peers:</b> {file.connections} | <b>Seeders:</b> {file.num_seeders}"
+                    msgg = f"<b>🎈 Peers:</b> {file.connections} | <b>🎈 Seeders:</b> {file.num_seeders}"
 
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
