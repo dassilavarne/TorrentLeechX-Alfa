@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     credit = await message.reply_text(
-        f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html"
+        f"🧲 𝕃𝕖𝕖𝕔𝕙𝕚𝕟𝕘 <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html"
     )
     # get link from the incoming message
     i_m_sefg = await message.reply_text("processing...", quote=True)
@@ -73,7 +73,7 @@ async def incoming_message_f(client, message):
             LOGGER.info(cf_name)
         else:
             if user_command == LEECH_COMMAND.lower():
-                await i_m_sefg.edit("No downloading source provided 🙄")
+                await i_m_sefg.edit("𝐈𝐧𝐝𝐢𝐫𝐦𝐞 𝐤𝐚𝐲𝐧𝐚𝐠𝐢 𝐲𝐨𝐤 🙄")
                 return
             is_file = True
             dl_url = rep_mess
@@ -82,7 +82,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
 
     else:
-        await i_m_sefg.edit("👺𝙉𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙨𝙤𝙪𝙧𝙘𝙚 𝙥𝙧𝙤𝙫𝙞𝙙𝙚𝙙👺")
+        await i_m_sefg.edit("👺𝐈𝐧𝐝𝐢𝐫𝐦𝐞 𝐤𝐚𝐲𝐧𝐚𝐠𝐢 𝐲𝐨𝐤 ")
         return
     if dl_url is not None:
 
@@ -101,7 +101,7 @@ async def incoming_message_f(client, message):
             aria_i_p = await aria_start()
             # LOGGER.info(aria_i_p)
 
-        await i_m_sefg.edit_text("Added to downloads. Send /status")
+        await i_m_sefg.edit_text("İ𝐧𝐝𝐢𝐫𝐢𝐥𝐞𝐧𝐥𝐞𝐫𝐞 𝐞𝐤𝐥𝐞𝐧𝐝𝐢 /status")
         # try to download the "link"
         is_zip = False
         is_cloud = False
@@ -138,7 +138,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "**FCUK**! wat have you entered. \n 𝐋ü𝐭𝐟𝐞𝐧 𝐨𝐤𝐮 /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 
@@ -147,7 +147,7 @@ async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     current_user_id = message.from_user.id
     credit = await message.reply_text(
-        f"💀 Downloading for you <a href='tg://user?id={current_user_id}'>🤕</a>",
+        f"💀 𝐢𝐧𝐝𝐢𝐫𝐢𝐥𝐢𝐲𝐨𝐫 <a href='tg://user?id={current_user_id}'>🤕</a>",
         parse_mode="html",
     )
     i_m_sefg = await message.reply_text("processing...", quote=True)
@@ -167,7 +167,7 @@ async def incoming_youtube_dl_f(client, message):
         yt_dl_pass_word = None
         cf_name = None
     else:
-        await i_m_sefg.edit("😔 No downloading source provided 🙄")
+        await i_m_sefg.edit("😔 𝐈𝐧𝐝𝐢𝐫𝐦𝐞 𝐤𝐚𝐲𝐧𝐚𝐠𝐢 𝐲𝐨𝐤 🙄")
         return
     if dl_url is not None:
         await i_m_sefg.edit_text("extracting links")
@@ -219,17 +219,17 @@ async def g_yt_playlist(client, message):
         if user_command == GPYTDL_COMMAND.lower():
             is_cloud = True
     else:
-        await message.reply_text("😔 No downloading source provided 🙄", quote=True)
+        await message.reply_text("😔 𝐈𝐧𝐝𝐢𝐫𝐦𝐞 𝐤𝐚𝐲𝐧𝐚𝐠𝐢 𝐲𝐨𝐤 🙄", quote=True)
         return
     if "youtube.com/playlist" in url:
         i_m_sefg = await message.reply_text(
-            f"💀 Downloading for you <a href='tg://user?id={usr_id}'>🤗</a>",
+            f"💀 𝐢𝐧𝐝𝐢𝐫𝐢𝐥𝐢𝐲𝐨𝐫 <a href='tg://user?id={usr_id}'>🤗</a>",
             parse_mode="html",
         )
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
 
     else:
-        await message.reply_text("YouTube playlist link only 🙄", quote=True)
+        await message.reply_text("𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐨𝐲𝐧𝐚𝐭𝐦𝐚 𝐥𝐢𝐬𝐭𝐞𝐬𝐢 🙄", quote=True)
 
 
 #
@@ -249,14 +249,14 @@ async def g_clonee(client, message):
         await gclone.link_gen_size()
     else:
         await message.reply_text(
-            "You should reply to a message, which format should be [ID of Gdrive file/folder Name of the file/folder]\nOr read Github for detailled information"
+            " 𝕭𝖎ç𝖎𝖒 [𝕲𝖉𝖗𝖎𝖛𝖊 𝖉𝖔𝖘𝖞𝖆/𝖐𝖑𝖆𝖘ö𝖗 𝖐𝖎𝖒𝖑𝖎ğ𝖎 𝕯𝖔𝖘𝖞𝖆/𝖐𝖑𝖆𝖘ö𝖗ü𝖓 𝖆𝖉ı] "
         )
 
 
 async def rename_tg_file(client, message):
     usr_id = message.from_user.id
     if not message.reply_to_message:
-        await message.reply("😔 No downloading source provided 🙄", quote=True)
+        await message.reply("😔 𝐈𝐧𝐝𝐢𝐫𝐦𝐞 𝐤𝐚𝐲𝐧𝐚𝐠𝐢 𝐲𝐨𝐤 🙄", quote=True)
         return
     if len(message.command) > 1:
         new_name = (
@@ -286,7 +286,7 @@ async def rename_tg_file(client, message):
                 message_id = final_response[key_f_res_se]
                 channel_id = str(message.chat.id)[4:]
                 private_link = f"https://t.me/c/{channel_id}/{message_id}"
-                message_to_send += "👉 <a href='"
+                message_to_send += "🔥 <a href='"
                 message_to_send += private_link
                 message_to_send += "'>"
                 message_to_send += local_file_name
@@ -294,12 +294,12 @@ async def rename_tg_file(client, message):
                 message_to_send += "\n"
             if message_to_send != "":
                 mention_req_user = (
-                    f"<a href='tg://user?id={usr_id}'>Your Requested Files</a>\n\n"
+                    f"<a href='tg://user?id={usr_id}'>𝐃𝐨𝐬𝐲𝐚𝐥𝐚𝐫ı𝐧ı𝐳</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
-                message_to_send = message_to_send + "\n\n" + "#uploads"
+                message_to_send = message_to_send + "\n\n" + "【﻿Ｙüｋｌｅｎｄｉ】"
             else:
-                message_to_send = "<i>FAILED</i> to upload files. 😞😞"
+                message_to_send = "<i>FAILED</i> 𝐝𝐨𝐬𝐲𝐚𝐥𝐚𝐫ı 𝐲ü𝐤𝐥𝐞𝐦𝐞𝐤 𝐢ç𝐢𝐧 "
             await message.reply_text(
                 text=message_to_send, quote=True, disable_web_page_preview=True
             )
@@ -308,5 +308,5 @@ async def rename_tg_file(client, message):
 
     else:
         await message.reply_text(
-            "😔 Provide new name of the file with extension 😐", quote=True
+            "😔 𝐃𝐨𝐬𝐲𝐚𝐧ı𝐧 𝐲𝐞𝐧𝐢 𝐚𝐝ı𝐧ı 𝐬𝐚ğ𝐥𝐚𝐲ı𝐧 😐", quote=True
         )
