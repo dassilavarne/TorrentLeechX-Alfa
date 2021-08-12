@@ -40,7 +40,7 @@ async def down_load_media_f(client, message):  # to be removed
         await upload_to_gdrive(the_real_download_location_g, mess_age, message, user_id)
     else:
         await mess_age.edit_text(
-            "Reply to a Telegram Media, to upload to the Cloud Drive."
+            "𝐁𝐮𝐥𝐮𝐭 𝐒ü𝐫ü𝐜ü𝐬ü𝐧𝐞 𝐲ü𝐤𝐥𝐞𝐦𝐞𝐤 𝐢ç𝐢𝐧 𝐛𝐢𝐫 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐞𝐝𝐲𝐚𝐬ı𝐧ı 𝐲𝐚𝐧ı𝐭𝐥𝐚𝐲ı𝐧."
         )
 
 
@@ -78,6 +78,6 @@ async def download_tg(client, message):
                 f"Downloaded to <code>{the_real_download_location}</code> in <u>{ms}</u> seconds"
             )
         else:
-            await mess_age.edit_text("😔 Download Cancelled or some error happened")
+            await mess_age.edit_text("😔İ𝐧𝐝𝐢𝐫𝐦𝐞 İ𝐩𝐭𝐚𝐥 𝐄𝐝𝐢𝐥𝐝𝐢 𝐯𝐞𝐲𝐚 𝐛𝐢𝐫 𝐡𝐚𝐭𝐚 𝐨𝐥𝐮ş𝐭𝐮")
             return None, mess_age
     return the_real_download_location, mess_age
