@@ -50,7 +50,7 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
             gid_dict[chat_id].pop()
             gid_dict[chat_id].append(mess_id)
 
-    prev_mess = "By gautamajay52"
+    prev_mess = "By @kamileecher"
     while True:
         downloads = aria_i_p.get_downloads()
         msg = ""
@@ -70,13 +70,13 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
 
-                msg += f"\n<b>📚 {downloading_dir_name}</b>"
-                msg += f"\n<b>🚧 {prog} </b>"
-                msg += f"\n<b>✨ Speed </b>: {file.download_speed_string()}"
-                msg += f"\n<b>🏴󠁧󠁢󠁮󠁩󠁲󠁿 Status </b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
-                msg += f"\n<b>⌛  ETA: </b> {file.eta_string()}"
-                msg += f"\n🔗{msgg}"
-                msg += f"\n<b>🔱 Cancel:</b> <code>/cancel {file.gid}</code>"
+                msg += f"\n\n<b>📚 {downloading_dir_name}</b>"
+                msg += f"\n\n<b>🚧 {prog} </b>"
+                msg += f"\n\n<b>✨ Speed </b>: {file.download_speed_string()}"
+                msg += f"\n\n<b>🐳󠁧󠁢󠁮󠁩󠁲󠁿 Status </b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
+                msg += f"\n\n<b>⌛  ETA: </b> {file.eta_string()}"
+                msg += f"\n\n🔗 {msgg}"
+                msg += f"\n\n<b>🔱 Cancel:</b> <code>/cancel {file.gid}</code>"
                 msg += "\n"
 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
