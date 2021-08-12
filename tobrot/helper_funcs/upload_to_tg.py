@@ -74,7 +74,7 @@ async def upload_to_tg(
         new_m_esg = message
         if not message.photo:
             new_m_esg = await message.reply_text(
-                f"Found {len(directory_contents)} files <a href='tg://user?id={from_user}'>🤒</a>",
+                f"𝐃𝐨𝐬𝐲𝐚 {len(directory_contents)} 𝐁𝐮𝐥𝐮𝐧𝐝𝐮 <a href='tg://user?id={from_user}'>🤒</a>",
                 quote=True
                 # reply_to_message_id=message.message_id
             )
@@ -94,9 +94,9 @@ async def upload_to_tg(
             LOGGER.info("TODO")
             d_f_s = humanbytes(os.path.getsize(local_file_name))
             i_m_s_g = await message.reply_text(
-                "Telegram does not support uploading this file.\n"
-                f"Detected File Size: {d_f_s} 😡\n"
-                "\n🤖 trying to split the files 🌝🌝🌚"
+                "𝟐𝐆𝐁 𝐛𝐮𝐲𝐮𝐤 𝐃𝐨𝐬𝐲𝐚𝐥𝐚𝐫 𝐘ü𝐤𝐥𝐞𝐧𝐦𝐞𝐳.\n"
+                f"𝐃𝐨𝐬𝐲𝐚 𝐁𝐨𝐲𝐮𝐭𝐮: {d_f_s} 😡\n"
+                "\n🤖 𝐃𝐨𝐬𝐲𝐚𝐥𝐚𝐫 𝐁ö𝐥ü𝐧ü𝐲𝐨𝐫 🌝🌝🌚"
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -105,9 +105,9 @@ async def upload_to_tg(
             LOGGER.info(totlaa_sleif)
             ba_se_file_name = os.path.basename(local_file_name)
             await i_m_s_g.edit_text(
-                f"Detected File Size: {d_f_s} 😡\n"
-                f"<code>{ba_se_file_name}</code> splitted into {number_of_files} files.\n"
-                "trying to upload to Telegram, now ..."
+                f"𝐃𝐨𝐬𝐲𝐚 𝐁𝐨𝐲𝐮𝐭𝐮: {d_f_s} 😡\n"
+                f"<code>{ba_se_file_name}</code>  {number_of_files} 𝐏𝐚𝐫𝐜𝐚𝐲𝐚 𝐁ö𝐥ü𝐧𝐝ü.\n"
+                "𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦'𝐚 𝐲ü𝐤𝐥𝐞𝐧𝐢𝐲𝐨𝐫.. "
             )
             for le_file in totlaa_sleif:
                 # recursion: will this FAIL somewhere?
@@ -221,7 +221,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         button_markup = pyrogram.InlineKeyboardMarkup(button)
 
         await messa_ge.reply_text(
-            f"🤖: Uploaded successfully `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay}",
+            f"🤖: 𝐁𝐚ş𝐚𝐫ı𝐲𝐥𝐚 𝐲ü𝐤𝐥𝐞𝐧𝐝𝐢 `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay}",
             reply_markup=button_markup,
         )
         os.remove(file_upload)
@@ -290,7 +290,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         button_markup = pyrogram.InlineKeyboardMarkup(button)
 
         await messa_ge.reply_text(
-            f"🤖: Uploaded successfully `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay}",
+            f"🤖: 𝐁𝐚ş𝐚𝐫ı𝐲𝐥𝐚 𝐲ü𝐤𝐥𝐞𝐧𝐝𝐢 `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay}",
             reply_markup=button_markup,
         )
         shutil.rmtree(file_upload)
