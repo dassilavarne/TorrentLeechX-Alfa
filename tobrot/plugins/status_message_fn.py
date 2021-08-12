@@ -70,13 +70,13 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
 
-                msg += f"\n<b>{downloading_dir_name}</b>"
-                msg += f"\n<b>{prog}</b>"
-                msg += f"\n<b>Speed</b>: {file.download_speed_string()}"
-                msg += f"\n<b>Status</b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
-                msg += f"\n<b>ETA:</b> {file.eta_string()}"
-                msg += f"\n{msgg}"
-                msg += f"\n<b>To Cancel:</b> <code>/cancel {file.gid}</code>"
+                msg += f"\n<b>📚 {downloading_dir_name}</b>"
+                msg += f"\n<b>🚧 {prog} </b>"
+                msg += f"\n<b>✨ Speed </b>: {file.download_speed_string()}"
+                msg += f"\n<b>🏴󠁧󠁢󠁮󠁩󠁲󠁿 Status </b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
+                msg += f"\n<b>⌛  ETA: </b> {file.eta_string()}"
+                msg += f"\n🔗{msgg}"
+                msg += f"\n<b>🔱 Cancel:</b> <code>/cancel {file.gid}</code>"
                 msg += "\n"
 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
@@ -88,12 +88,12 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
         free = humanbytes(free)
 
         ms_g = (
-            f"<b>Bot Uptime</b>: <code>{hr} : {mi} : {se}</code>\n"
+            f"<b>🤖 Bot Uptime</b>: <code>{hr} : {mi} : {se}</code>\n"
             f"<b>T:</b> <code>{total}</code> <b>U:</b> <code>{used}</code> <b>F:</b> <code>{free}</code>\n"
             f"<b>RAM:</b> <code>{ram}%</code> <b>CPU:</b> <code>{cpu}%</code>\n"
         )
         if msg == "":
-            msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
+            msg = "🤷‍♂️ 𝐈𝐧𝐝𝐢𝐫𝐦𝐞 𝐊𝐮𝐲𝐫𝐮ğ𝐮 𝐁𝐨𝐬"
             msg = ms_g + "\n" + msg
             await to_edit.edit(msg)
             break
@@ -140,7 +140,7 @@ async def cancel_message_f(client, message):
             aria_i_p.remove(downloads=downloads, force=True,
                             files=True, clean=True)
             await i_m_s_e_g.edit_text(
-                f"Download cancelled :\n<code>{name} ({size})</code> by <a href='tg://user?id={message.from_user.id}'>{message.from_user.first_name}</a>"
+                f"İ𝐧𝐝𝐢𝐫𝐦𝐞 𝐢𝐩𝐭𝐚𝐥 𝐞𝐝𝐢𝐥𝐝𝐢 :\n<code>{name} ({size})</code> by <a href='tg://user?id={message.from_user.id}'>{message.from_user.first_name}</a>"
             )
         except Exception as e:
             await i_m_s_e_g.edit_text("<i>FAILED</i>\n\n" + str(e) + "\n#error")
@@ -274,13 +274,13 @@ def up_time(time_taken):
 async def upload_log_file(client, message):
     g = await AdminCheck(client, message.chat.id, message.from_user.id)
     if g:
-        await message.reply_document("Torrentleech-Gdrive.txt")
+        await message.reply_document("Torrentleech.txt")
 
 async def upload_as_doc(client, message):
     user_specific_config[message.from_user.id]=UserDynaConfig(message.from_user.id,True)
-    await message.reply_text("**🗞 Your Files Will Be Uploaded As Document 📁**")
+    await message.reply_text("**🗞 𝐃𝐨𝐬𝐲𝐚𝐥𝐚𝐫ı𝐧ı𝐳 𝐁𝐞𝐥𝐠𝐞 𝐎𝐥𝐚𝐫𝐚𝐤 𝐘ü𝐤𝐥𝐞𝐧𝐞𝐜𝐞𝐤𝐭𝐢𝐫 📁**")
 
 
 async def upload_as_video(client, message):
     user_specific_config[message.from_user.id]=UserDynaConfig(message.from_user.id,False)
-    await message.reply_text("**🗞 Your Files Will Be Uploaded As Streamable 🎞**")
+    await message.reply_text("**🗞 𝐃𝐨𝐬𝐲𝐚𝐥𝐚𝐫ı𝐧ı𝐳 𝐀𝐤ış𝐥ı 𝐎𝐥𝐚𝐫𝐚𝐤 𝐘ü𝐤𝐥𝐞𝐧𝐞𝐜𝐞𝐤 🎞**")
