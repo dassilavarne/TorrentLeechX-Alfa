@@ -63,20 +63,20 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
             if file.status == "active":
                 is_file = file.seeder
                 if is_file is None:
-                    msgg = f"<b>🎈 Conn:</b> {file.connections}"
+                    msgg = f"<b>🎈 𝐂𝐨𝐧𝐧:</b> {file.connections}"
                 else:
-                    msgg = f"<b>🎈 Peers:</b> {file.connections} | <b>🎈 Seeders:</b> {file.num_seeders}"
+                    msgg = f"<b>🎈 𝐏𝐞𝐞𝐫𝐬:</b> {file.connections} | <b>🎈 𝐒𝐞𝐞𝐝𝐞𝐫𝐬:</b> {file.num_seeders}"
 
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
 
-                msg += f"\n\n<b>📚 {downloading_dir_name}</b>"
-                msg += f"\n\n<b>🚧 {prog} </b>"
-                msg += f"\n\n<b>✨ Speed </b>: {file.download_speed_string()}"
-                msg += f"\n\n<b>🐳󠁧󠁢󠁮󠁩󠁲󠁿 Status </b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
-                msg += f"\n\n<b>⌛  ETA: </b> {file.eta_string()}"
+                msg += f"\n\n\n\n<b>📚 {downloading_dir_name}</b>"
+                msg += f"\n\n<b>🚧 𝐈𝐥𝐞𝐫𝐥𝐞𝐦𝐞: {prog} </b>"
+                msg += f"\n\n<b>✨ 𝐇𝐢𝐳 </b>: {file.download_speed_string()}"
+                msg += f"\n\n<b>🐳󠁧󠁢󠁮󠁩󠁲󠁿 𝐃𝐮𝐫𝐮𝐦 </b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
+                msg += f"\n\n<b>⌛  𝐒𝐮𝐫𝐞: </b> {file.eta_string()}"
                 msg += f"\n\n🔗 {msgg}"
-                msg += f"\n\n<b>🔱 Cancel:</b> <code>/cancel {file.gid}</code>"
+                msg += f"\n\n<b>🔱 𝐈𝐩𝐭𝐚𝐥:</b> <code>/cancel {file.gid}</code>"
                 msg += "\n"
 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
@@ -88,8 +88,8 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
         free = humanbytes(free)
 
         ms_g = (
-            f"<b>🤖 Bot Uptime</b>: <code>{hr} : {mi} : {se}</code>\n"
-            f"<b>T:</b> <code>{total}</code> <b>U:</b> <code>{used}</code> <b>F:</b> <code>{free}</code>\n"
+            f"<b>🤖 𝐁𝐨𝐭 𝐔𝐩𝐭𝐢𝐦𝐞 </b>: <code>{hr} : {mi} : {se}</code>\n"
+            f"<b>T:</b> <code>{total}</code> <b>U:</b> <code>{used}</code> \n <b>F:</b> <code>{free}</code>\n"
             f"<b>RAM:</b> <code>{ram}%</code> <b>CPU:</b> <code>{cpu}%</code>\n"
         )
         if msg == "":
