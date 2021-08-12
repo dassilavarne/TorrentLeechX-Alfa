@@ -297,7 +297,7 @@ async def rename_tg_file(client, message):
                     f"<a href='tg://user?id={usr_id}'>𝕐ü𝕜𝕝𝕖𝕟𝕖𝕟 𝔻𝕠𝕤𝕪𝕒𝕝𝕒𝕣ı𝕟ı𝕫</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
-                message_to_send = message_to_send + "\n\n" + "【﻿Ｙüｋｌｅｎｄｉ】"
+                message_to_send = message_to_send + "\n\n" + " 🅺🅰🅼🅸🅻🅴🅴🅲🅷🅴🆁 "
             else:
                 message_to_send = "<i>FAILED</i> 𝐝𝐨𝐬𝐲𝐚𝐥𝐚𝐫ı 𝐲ü𝐤𝐥𝐞𝐦𝐞𝐤 𝐢ç𝐢𝐧 "
             await message.reply_text(
