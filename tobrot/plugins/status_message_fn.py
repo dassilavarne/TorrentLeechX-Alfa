@@ -63,20 +63,20 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
             if file.status == "active":
                 is_file = file.seeder
                 if is_file is None:
-                    msgg = f"<b>🎈 𝐂𝐨𝐧𝐧:</b> {file.connections}"
+                    msgg = f"<b>𝐂𝐨𝐧𝐧:</b> {file.connections}"
                 else:
                     msgg = f"<b>🎈 𝐏𝐞𝐞𝐫𝐬:</b> {file.connections} | <b>🎈 𝐒𝐞𝐞𝐝𝐞𝐫𝐬:</b> {file.num_seeders}"
 
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
 
-                msg += f"\n\n\n\n<b>📚 {downloading_dir_name}</b>"
-                msg += f"\n\n<b>🚧 𝐈𝐥𝐞𝐫𝐥𝐞𝐦𝐞: {prog} </b>"
-                msg += f"\n\n<b>✨ 𝐇𝐢𝐳 </b>: {file.download_speed_string()}"
-                msg += f"\n\n<b>🐳󠁧󠁢󠁮󠁩󠁲󠁿 𝐃𝐮𝐫𝐮𝐦 </b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
-                msg += f"\n\n<b>⌛  𝐒𝐮𝐫𝐞: </b> {file.eta_string()}"
-                msg += f"\n\n🔗 {msgg}"
-                msg += f"\n\n<b>🔱 𝐈𝐩𝐭𝐚𝐥:</b> <code>/cancel {file.gid}</code>"
+                msg += f"\n\n\n\n<b>├ 📚 {downloading_dir_name}</b>"
+                msg += f"\n\n<b>├ 🚧 𝐈𝐥𝐞𝐫𝐥𝐞𝐦𝐞: {prog} </b>"
+                msg += f"\n\n<b>├ ✨ 𝐇𝐢𝐳 </b>: {file.download_speed_string()}"
+                msg += f"\n\n<b>├ 🐳󠁧󠁢󠁮󠁩󠁲󠁿 𝐃𝐮𝐫𝐮𝐦 </b>: {file.progress_string()} <b>of</b> {file.total_length_string()}"
+                msg += f"\n\n<b>├ ⌛  𝐒𝐮𝐫𝐞: </b> {file.eta_string()}"
+                msg += f"\n\n├ 🔗 {msgg}"
+                msg += f"\n\n<b>├ 🔱 𝐈𝐩𝐭𝐚𝐥:</b> <code>/cancel {file.gid}</code>"
                 msg += "\n"
 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
